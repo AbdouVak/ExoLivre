@@ -11,16 +11,12 @@ leurs auteurs respectifs.</p>
 include ('Auteur.php');
 include ('Livre.php');
 
+$King = new Auteur("Stephen","King");
 
-$Ca = new Livre("Ca", 1986, 1138, 20);
-$Simetierre = new Livre("Simetierre", 1983, 374, 15);
-$LeFleau = new Livre("Le Fléau", 1978, 823, 14);
-$Shining = new Livre("Shining", 1977, 447, 16);
+$Ca = new Livre("Ca", 1986, 1138, 20, $King);
+$Simetierre = new Livre("Simetierre", 1983, 374, 15, $King);
+$LeFleau = new Livre("Le Fléau", 1978, 823, 14, $King);
+$Shining = new Livre("Shining", 1977, 447, 16, $King);
 
-$bibliographie = array($Ca,$Simetierre,$LeFleau,$Shining);
-
-$auteur1 = new Auteur("Stephen","King",$bibliographie);
-echo $auteur1 ;
-
-$auteur1->afficherBibliographie()
+$King->afficherBibliographie();
 ?>
