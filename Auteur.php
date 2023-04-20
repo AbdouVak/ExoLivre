@@ -6,12 +6,19 @@ class Auteur{
     private string $_auteurPrenom;
     private $_bibliographie;
 
-    public function __construct($auteurNom ,$auteurPrenom)
+    public function __construct(string $auteurNom ,string $auteurPrenom)
     {
         $this->_auteurNom = $auteurNom;
         $this->_auteurPrenom = $auteurPrenom;
         $this->_bibliographie = [];
     }
+
+    public function getAuteurNom() : string{return $this->_auteurNom;}
+    public function setAuteurNom(string $auteurNom){$this->_auteurNom = $auteurNom;}
+
+    public function getAuteurPrenom() : string{return $this->_auteurPrenom;}
+    public function setAuteurPrenom(string $auteurPrenom){$this->_auteurPrenom = $auteurPrenom;}
+
 
     public function __toString()
     {
